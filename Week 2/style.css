@@ -1,0 +1,39 @@
+body { 
+    background-color: #2b2b2b; /*Oh lord- ok, this style is for commenting css files, while <!----> is for .html*/
+    color: antiquewhite; /*Was honestly very worried we'd have to do this for everything, but if text is in the body this works.*/
+}
+
+a {
+    color: #008282;
+    text-shadow: rgb(44, 106, 134) 1px 0 2px;
+}
+
+#beebop {
+    border-style: groove;
+    border-width: 2px;
+    border-color: #008282;
+}
+
+.wows {
+    color: #008282;
+    font-style: italic;
+    text-shadow: 2px 2px #000000;
+}
+
+.thingy {
+    text-align: center;
+    left: 40%;
+    position: fixed;
+    bottom: 20px;
+} 
+
+img {
+height: 226px;    
+}
+/*Ok, so we'll fiddle with it later but we're trying to make a centered bottom thingy
+that will helpfully be there to either take you back to TE@L or let you ask for things- 
+however, despite best efforts that isn't happening. 50% on our end is way too far over
+and while the form looks great the anchor looks awful.*/
+
+/*Hindsight continues: We should have done this all in flexbox, and we would have if we 
+weren't so unwell at the moment. Next time, Batman.*/
