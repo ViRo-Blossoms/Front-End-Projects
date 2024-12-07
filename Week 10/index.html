@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Portal</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body style="color: rgb(207, 207, 207); background-color: rgb(51, 51, 51);" class="container">
+    <!-- BAD BAD BAD- tag classes properly soon! use Week 3 to do so! -->
+    <nav class="navbar sticky-top bg-body-tertiary"> 
+        <div class="container-fluid">
+            <a class="navbar-brand">
+                <img src="V.png" alt="Viromedical Logo" class="d-inline-block" height="50">
+                ViRoMedical +
+            </a>
+              <div class="navbar-nav">
+                <span style="color: blueviolet;">Secetary Portal</span>
+              </div>
+        </div>
+    </nav>
+    <br> 
+    <!-- Use the inspector in browser to visualize the Divs better -->
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="appointment-date">Appointment Date</label>
+                        <input type="date" class="form-control" id="appointment-date">
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="appointment-time">Appointment Time</label>
+                        <input type="time" class="form-control" id="appointment-time">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="patient-name">Patient's Name</label>
+                        <input type="text" class="form-control" id="patient-name" placeholder="Jane Doe">
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="patient-number">Patient's Phone Number</label>
+                        <input type="text" class="form-control" id="patient-number" placeholder="+1 (517) 555-1234">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="provider">Provider</label>
+                        <select class="form-select" id="provider">
+                            <option selected>Select...</option>
+                            <option value="Dr. Cunningham">Dr. Cunningham, Psychology</option>
+                            <option value="RN. Vlad">RN. Vlad, Phlebotomy</option>
+                            <option value="LP. Aeisite">LP. Aeisite, optometrist</option>
+                          </select>                    
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <button id="add" class="btn btn-primary form-control">Schedule Appointment</button>
+            </div>
+        </div>
+    </div>
+    <table id="list" class="table table-dark table-striped">
+        <tr>
+            <th>Date Scheduled</th>
+            <th>Appointment Date</th>
+            <th>appointment Time</th>
+            <th>Patient Name</th>
+            <th>Patient Phone Number</th>
+            <th>Provider</th>
+            <th>Actions</th>
+        </tr>
+    </table>
+
+    <script src="index.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
