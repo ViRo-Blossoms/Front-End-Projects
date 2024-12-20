@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Land Grab</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body style="color: rgb(207, 207, 207); background-color: rgb(51, 51, 51);" class="container">
+
+    <!-- Nav Bar -->
+    <nav class="navbar sticky-top bg-body-tertiary"> 
+        <div class="container-fluid">
+            <a class="navbar-brand">
+                Land Grab
+            </a>
+              <div class="navbar-nav">
+                <!-- <span style=""></span> -->
+              </div>
+        </div>
+    </nav>
+
+    <!--Player Names  -->
+    <div class="row">
+        <div class="col-sm">
+            <div class="form-group">
+                <label for="p1Name">Player 1</label>
+                <input type="text" class="form-control" id="p1Name" placeholder="Jane Doe">
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="form-group">
+                <label for="p2Name">Player 2</label>
+                <input type="text" class="form-control" id="p2Name" placeholder="Tavish Degroot">
+            </div>
+        </div>
+
+
+    <!--PvP or PvC  -->
+    <div class="container text-center">
+        <div class="row">
+            <!-- <div class="col-sm"> -->
+                <button id="PvP" class="btn btn-secondary btn-lg form-control"> Start! </button>
+                <button id="Reset" class=" btn-secondary btn-lg disabled">Reset Board</button>
+            <!-- </div> -->
+        </div>
+    </div>
+
+    <br>
+    <!-- T3 Buttons -->
+    <!-- Top, Bottom, Middle, Left, Right -->
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-sm">
+                <button id="TL" class="btn btn-secondary disabled" style="--bs-btn-padding-y: 4rem; --bs-btn-padding-x: 4rem; --bs-btn-font-size: 4rem;" value=""></button>
+                <button id="TM" class="btn btn-secondary disabled" style="--bs-btn-padding-y: 4rem; --bs-btn-padding-x: 4rem; --bs-btn-font-size: 4rem;" value=""></button>
+                <button id="TR" class="btn btn-secondary disabled" style="--bs-btn-padding-y: 4rem; --bs-btn-padding-x: 4rem; --bs-btn-font-size: 4rem;" value=""></button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <button id="ML" class="btn btn-secondary disabled" style="--bs-btn-padding-y: 4rem; --bs-btn-padding-x: 4rem; --bs-btn-font-size: 4rem;" value=""></button>
+                <button id="MM" class="btn btn-secondary disabled" style="--bs-btn-padding-y: 4rem; --bs-btn-padding-x: 4rem; --bs-btn-font-size: 4rem;" value=""></button>
+                <button id="MR" class="btn btn-secondary disabled" style="--bs-btn-padding-y: 4rem; --bs-btn-padding-x: 4rem; --bs-btn-font-size: 4rem;" value=""></button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <button id="BL" class="btn btn-secondary disabled" style="--bs-btn-padding-y: 4rem; --bs-btn-padding-x: 4rem; --bs-btn-font-size: 4rem;" value=""></button>
+                <button id="BM" class="btn btn-secondary disabled" style="--bs-btn-padding-y: 4rem; --bs-btn-padding-x: 4rem; --bs-btn-font-size: 4rem;" value=""></button>
+                <button id="BR" class="btn btn-secondary disabled" style="--bs-btn-padding-y: 4rem; --bs-btn-padding-x: 4rem; --bs-btn-font-size: 4rem;" value=""></button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- iphone venzula bottom text -->
+     <div class="container text-center">
+        <h3 id="bigGreen">Put in your names and select your mode!</h3>
+        <p id="littleGreen">Tip: Player one always goes first.</p>
+     </div>
+
+     <table id="log" class="table table-dark table-striped text-center">
+        <tr>
+            <th>Log</th>
+        </tr>
+    </table>
+
+    <script src="index.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
