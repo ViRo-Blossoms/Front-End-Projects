@@ -1,17 +1,3 @@
-//To do :
-// player clicks a square
-// grab that square id
-// player clicks x or o
-// set the value of that square and disable it
-// if all squares are disabled and none are the 10 possible combos, all lose
-// if one of the combos is complete, that player wins
-
-//BUG
-//The first round goes fine, but resetting the board makes it think it's always player 2's turn 
-//The console suggests that its registering two clicks or maybe there's two buttons? We basically wanted
-//to show we could do it with minimal tutorials, so if friday we can't make it work we'll just watch the 
-//promineo one lmao
-
 //Init Setup
 var player1 = '';
 var player2 = '';
@@ -37,7 +23,6 @@ var sBR = '';
 
 // Start CODE
 document.getElementById('PvP').addEventListener('click', () =>{
-    gameActive = 1; //Doesn't do anything atm
 
     //Set player names
     player1 = document.getElementById('p1Name').value;
@@ -66,6 +51,9 @@ document.getElementById('PvP').addEventListener('click', () =>{
             reset();
         })
 
+        document.getElementById('bigGreen').innerHTML = `(Blue) ${player1}, You're up first!`
+        document.getElementById('littleGreen').innerHTML = `(Red) ${player2}, you'll be going next.`
+    }) //We were right, this }) was just too far down vvv
         //We think the bug lies in here somewhere, it's probably definetly from all the buttons getting a new listener
 
         document.getElementById('TL').addEventListener('click', () =>{
@@ -113,7 +101,7 @@ document.getElementById('PvP').addEventListener('click', () =>{
             let posLong = 'Bottom Right';
             determine(posShort, posLong);
         })
-    })
+
 
 // FUNC
     function determine (posShort, posLong) {
@@ -122,14 +110,14 @@ document.getElementById('PvP').addEventListener('click', () =>{
         if (turn % 2 == 0) { //PLAYER 1 - Blue X
             document.getElementById(posShort).classList.add('btn-primary');
             document.getElementById(posShort).value = 'X';
-            document.getElementById('littleGreen').innerHTML = `${player1} takes ${posLong}.`
-            document.getElementById('bigGreen').innerHTML = `Your turn, ${player2}`
+            document.getElementById('littleGreen').innerHTML = `(Blue) ${player1} takes ${posLong}.`
+            document.getElementById('bigGreen').innerHTML = `Your turn, (Red) ${player2}!`
             console.log(`turn - ${turn} / pos - ${posShort} / pl - ${player1}`)
         } else { //PLAYER 2 - Red O
             document.getElementById(posShort).classList.add('btn-danger');
             document.getElementById(posShort).value = 'O';
-            document.getElementById('littleGreen').innerHTML = `${player2} takes ${posLong}.`
-            document.getElementById('bigGreen').innerHTML = `Your turn, ${player1}`
+            document.getElementById('littleGreen').innerHTML = `(Red) ${player2} takes ${posLong}.`
+            document.getElementById('bigGreen').innerHTML = `Your turn, (Blue) ${player1}!`
             console.log(`turn - ${turn} / pos - ${posShort} / p - ${player2}`)
         };
         if (turn > 1) {
@@ -231,11 +219,14 @@ document.getElementById('PvP').addEventListener('click', () =>{
             document.getElementById('bigGreen').innerHTML =`${player1} Wins in ${turn} turns!`
             document.getElementById('littleGreen').innerHTML = `Try again for a Zeni, ${player2}?`
             console.log(`${player1} wins`)
+            p1Score ++;
         } else { //P2
             document.getElementById('bigGreen').innerHTML =`${player2} Wins in ${turn} turns!`
             document.getElementById('littleGreen').innerHTML = `Try again for a Zeni, ${player1}?`
             console.log(`${player2} wins`)
+            p2Score++;
         }
+        document.getElementById('scoreboard').innerHTML = `(Blue) ${player1} - ${p1Score} | (Red) ${player2} - ${p2Score}`
     }
 
     function lockdown () {
@@ -245,9 +236,7 @@ document.getElementById('PvP').addEventListener('click', () =>{
     }
 
     function reset () {
-     
         turn = 0;
-        gameActive = 0;
 
         bibbidi.forEach(element => //Remove p1 moves
             document.getElementById(element).classList.remove('btn-primary')
