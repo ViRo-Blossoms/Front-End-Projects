@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- Aspect form -->
+<div>
+    <div>
+        <h3>
+            People & Favorite Numbers
+        </h3>
+    </div>
+    <div>
+        <form>
+            <textarea class="form-control" id="people-name" placeholder="Jimbo"></textarea>
+            <textarea class="form-control" id="people-number" placeholder="159"></textarea>
+            <button class="btn btn-success mt-3" onclick="onSavePersonClick(event)">Save Person</button>
+        </form>
+    </div>
+    <div id="peopleContainer"></div>
+</div>
+
+    <!-- Imports -->
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="ApiKeys.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
+
+<!-- 
+[CRUD]Create a CRD application (CRUD without update) using json-server or another API
+[X]Use fetch and async/await to interact with the API
+[X]Use a form to create/post new entities
+[X]Build a way for users to delete entities
+[X]Include a way to get entities from the API and display them
+[X]You do NOT need update, but you can add it if you'd like
+[?]Use Bootstrap and/or CSS to style your project 
+-->
+
+<!-- We hate that we couldn't get our code working really at all. We get the principals but we couldn't make
+ it all function in time. Originally our idea was to have a mini-monster-collector type deal where there were
+ aspects, monsters, and teams. Teams had several monsters and a leader, and the monsters had an aspect, and 
+ the aspect had one aspect it was strong and weak against. This was absolutely more than we could chew. so next
+ time we'll crush it, but we guess healing up from thumb surgery took a lot out of us and we spent most of this
+ week (and the holiday break) recovering (and suffering before the surgery, respectively.)-->
