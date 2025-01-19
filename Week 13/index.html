@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+  </head>
+  <body>
+    
+  <div>
+      <div>
+          <h3>
+              People & Favorite Numbers
+          </h3>
+      </div>
+      <div>
+          <form>
+              <textarea class="form-control" id="people-name" placeholder="Jimbo"></textarea>
+              <textarea class="form-control" id="people-number" placeholder="159"></textarea>
+              <button class="btn btn-success mt-3" id="savePerson">Save Person</button>
+          </form>
+      </div>
+      <div id="peopleContainer"></div>
+  </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
+
+<!-- run npm dev :for vite
+ json-server --watch db.json : for json-server  -->
+
+ <!--     
+[X]It should run with the Vite command "npm run dev"
+[X]It should be written in TypeScript
+[X]It should have no type errors
+[X]There should be at least 3 Typescript .ts files that use import and export to work together -->
