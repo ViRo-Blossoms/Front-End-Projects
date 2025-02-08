@@ -1,9 +1,4 @@
 import Post from "./Post";
-//ID - int
-//DT - String
-//User - string*
-//Post Body - String
-//Image - String (path) Optional?
 
 // Huge thank you to Romaric Z for helping us debug this,
 // it turned out that we had simply messed up the variable names.
